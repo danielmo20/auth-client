@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          open-finance-client-credentials:
+            provider: spring
+            client-id: open-finance
+            client-secret: West038quad178.
+            authorization-grant-type: client_credentials
+            client-name: open-finance-client-credentials
+            scope: transaction.read
+        provider:
+          spring:
+            issuer-uri: http://auth-server:9000
